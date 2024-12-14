@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-13 19:16:06.866684",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type_of_cover",
+  "column_break_wjpm",
+  "commission_percentage"
+ ],
+ "fields": [
+  {
+   "fieldname": "type_of_cover",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Type of Cover",
+   "options": "Type of Cover",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commission_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Default Commission %",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wjpm",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-13 19:17:08.733710",
+ "modified_by": "Administrator",
+ "module": "Policy Management",
+ "name": "Insurance Type Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

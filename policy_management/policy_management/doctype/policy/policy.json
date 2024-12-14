@@ -1,0 +1,246 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:policy_number",
+ "creation": "2024-12-13 18:56:37.056880",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_dy0e",
+  "policy_number",
+  "start_date",
+  "end_date",
+  "column_break_lglt",
+  "status",
+  "insurance_company",
+  "type_of_cover",
+  "premium_amount",
+  "amended_from",
+  "section_break_vlww",
+  "name_of_insured",
+  "email",
+  "column_break_qpso",
+  "mobile",
+  "qid",
+  "vehicle_details_section",
+  "make_and_type",
+  "column_break_qpom",
+  "year_of_manufacturer",
+  "column_break_kxbw",
+  "registration_no",
+  "commission_detail_section",
+  "commission_percentage",
+  "edit_commission_rate",
+  "column_break_jqad",
+  "commission_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_dy0e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Policy",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "policy_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Policy Number ",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_of_cover",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type of Cover",
+   "options": "Type of Cover",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lglt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "premium_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Premium Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "insurance_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Insurance Company",
+   "options": "Insurance Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_vlww",
+   "fieldtype": "Section Break",
+   "label": "Client Details"
+  },
+  {
+   "fieldname": "name_of_insured",
+   "fieldtype": "Data",
+   "label": "Name of Insured",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_qpso",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "+974-",
+   "fieldname": "mobile",
+   "fieldtype": "Phone",
+   "label": "Mobile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_details_section",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Details"
+  },
+  {
+   "fieldname": "make_and_type",
+   "fieldtype": "Data",
+   "label": "Make and Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qpom",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "year_of_manufacturer",
+   "fieldtype": "Data",
+   "label": "Year of Manufacturer"
+  },
+  {
+   "fieldname": "column_break_kxbw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "registration_no",
+   "fieldtype": "Data",
+   "label": "Registration No"
+  },
+  {
+   "fieldname": "commission_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Commission Detail"
+  },
+  {
+   "fieldname": "commission_percentage",
+   "fieldtype": "Percent",
+   "label": "Commission Percentage",
+   "read_only_depends_on": "eval:doc.edit_commission_rate!=1"
+  },
+  {
+   "fieldname": "column_break_jqad",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount",
+   "read_only": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nExpired\nCanceled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qid",
+   "fieldtype": "Data",
+   "label": "QID"
+  },
+  {
+   "default": "0",
+   "fieldname": "edit_commission_rate",
+   "fieldtype": "Check",
+   "label": "Edit Commission Rate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-14 08:22:52.957222",
+ "modified_by": "Administrator",
+ "module": "Policy Management",
+ "name": "Policy",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
